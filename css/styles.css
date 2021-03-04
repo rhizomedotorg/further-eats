@@ -19,7 +19,7 @@ body {
 p {
 	padding: 2px 10px 0 10px;
 	max-width: 90vw;
-	margin: none;
+	margin: 0 2em 0 2em;
 }
 
 #main {
@@ -86,11 +86,14 @@ p {
 
 #artist-list {
 	display: flex;
+	flex-flow: row wrap;
 	width: 100%;
+	min-width: 200px;
 }
 
 #artist-list .text {
 	text-align: center;
+	padding: 10 40px 10 40px;
 }
 
 
