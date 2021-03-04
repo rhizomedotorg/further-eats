@@ -1,0 +1,27 @@
+@font-face {
+  font-family: "GoMono";
+  src: url("../assets/fonts/Go-Mono.woff") format("woff");
+}
+
+body {
+  font-family: GoMono, Times, serif;
+  margin: 0 0 0 0;
+}
+
+table#top-table {
+	width: 100vw;
+}
+
+table, th, td {
+  border: 1px solid black;
+  width: auto;
+  height: 100%;
+  margin: 0 auto 0 auto;
+
+}
+
+#black-square {
+	width: 100px;
+	height: 100px;
+	background-color: black;
+}
