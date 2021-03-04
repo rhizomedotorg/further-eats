@@ -9,36 +9,17 @@ body {
   background-color: lightgray;
 }
 
-table#top-table {
-	width: 100vw;
-}
-
-table, th, td {
-  /*border: 1px solid black;*/
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  border-right: 2px solid grey;
-  border-bottom: 2px solid grey;
-  width: auto;
-  max-width: 20vw;
-  /*height: 20vh;*/
-  margin: 0 auto 0 auto;
-  text-align: center;
-}
-
-tr table, tr table th, tr table td {
-	  width: 100%;
-}
-
 #black-square {
 	flex: 1 0 auto;
 	width: 100%;
 	height: auto;
-	background-color: black;
+	background-color: lightgray;
 }
 
 p {
 	padding: 2px 10px 0 10px;
+	max-width: 90vw;
+	margin: none;
 }
 
 #main {
@@ -49,9 +30,19 @@ p {
 	width: 100vw;
 }
 
-.cell-row {
-	display: flex;
-	flex-flow: row nowrap;
+.cell {
+  display: flex;
+  flex: 1 0 auto;
+  flex-flow: column nowrap;
+  justify-content: center;
+  width: auto;
+  min-width: 100px;
+  height: auto;
+  margin: 2px;
+  border-top: 2px solid white;
+  border-left: 2px solid white;
+  border-right: 2px solid grey;
+  border-bottom: 2px solid grey;
 }
 
 .image-cell {
@@ -62,24 +53,22 @@ p {
   border-left: 2px solid white;
   border-right: 2px solid grey;
   border-bottom: 2px solid grey;
-  width: auto;
-  height: auto;
+  width: 98%;
+  min-width: 200px;
+  height: 98%;
+  min-height: 200px;
   margin: 2px;
+  align-self: center;
   background-image: url("../assets/img/ramos_wu.jpg");
 }
 
-.cell {
-  display: flex;
-  flex: 1 0 auto;
-  flex-flow: column;
-  width: auto;
-  min-width: 200px;
-  height: auto;
-  margin: 2px;
-  border-top: 2px solid white;
-  border-left: 2px solid white;
-  border-right: 2px solid grey;
-  border-bottom: 2px solid grey;
+.cell-row {
+	display: flex;
+	flex-flow: row nowrap;
+}
+
+.cell-row .cell {
+  justify-content: center;
 }
 
 .logo {
@@ -87,8 +76,21 @@ p {
   align-self: center;
 }
 
-.cell-row .cell {
-  justify-content: center;
+#main-title {
+	flex: 1 0 auto;
+}
+
+.cell > .text {
+	padding: 5px 5px 5px 10px;
+}
+
+#artist-list {
+	display: flex;
+	width: 100%;
+}
+
+#artist-list .text {
+	text-align: center;
 }
 
 
