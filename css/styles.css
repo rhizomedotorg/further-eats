@@ -93,6 +93,12 @@ p {
 	  align-self: center;
 	}
 
+.cell-col {
+	display: flex;
+	flex-flow: column;
+	min-width: 8%;
+}
+
 .cell .text {
 	padding: 10px 40px 10px 40px;
 }
@@ -125,7 +131,7 @@ p {
 
 .artist-list .text {
 	text-align: center;
-	padding: 0;
+	padding: 5px;
 	text-overflow: auto;
 	width: 80%;
 	margin-left: auto;
@@ -178,11 +184,6 @@ p {
 	.artist-list .text {
 		width: 80%;
 	}
-
-/*	.cell-row {
-		flex-flow: row;
-		height: auto;
-	}*/
 
 	.logo > img {
 		width: 50vw;
