@@ -53,13 +53,15 @@ p {
   flex-grow: 10;
   flex-flow: column;
   width: 98%;
-  min-width: 200px;
-  height: 98%;
+  max-height: 98%;
   min-height: 200px;
   align-self: center;
-  background-image: url("../assets/img/ramos_wu.jpg");
 }
 
+.image-cell > img {
+	width: 100px;
+	height: 100px;
+}
 
 .main-title {
 	display: flex;
