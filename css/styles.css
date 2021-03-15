@@ -5,6 +5,7 @@
 
 body {
   font-family: GoMono, Times, serif;
+  font-size: 1.1rem;
   margin: 0 0 0 0;
   background-color: lightgray;
 }
@@ -33,7 +34,6 @@ p {
   justify-content: center;
   width: auto;
   height: auto;
-  min-height: 50px;
   border-top: 2px solid white;
   border-left: 2px solid white;
   border-right: 2px solid grey;
@@ -74,7 +74,7 @@ p {
 .cell-row {
 	display: flex;
 	flex-flow: row nowrap;
-	height: 20%;
+	height: auto;
 }
 
 	.cell-row .cell {
@@ -94,13 +94,13 @@ p {
 	}
 
 .cell .text {
-	padding: 5px 5px 5px 10px;
+	padding: 10px 40px 10px 40px;
 }
 
 .intro {
 	display: flex;
 	flex-flow: column;
-	justify-content: center;
+	justify-content: start;
 	text-align: left;
 	width: 30vw;
 	height: 80vh;
@@ -108,38 +108,53 @@ p {
 
 .intro > .text {
 	overflow: auto;
+	max-width: 85vw;
+	padding: 10px 10px 10px 30px;
+
 }
 
 .artist-list {
 	display: flex;
-	flex-flow: row wrap;
+	flex-flow: row nowrap;
 	width: 100%;
-	min-width: 200px;
 }
 
 .artist-list > .cell {
-	width: 13vw;
 	height: 20vh;
-	min-height: 10vh;
 }
 
 .artist-list .text {
 	text-align: center;
-	padding: 10px 40px 10 40px;
+	padding: 0;
 	text-overflow: auto;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
 }
 
+/*              DESKTOP               */
+
+@media only screen and (min-width: 600px) {
+
+	.mobile {
+		display: none !important;
+	}
+}
 
 /*              MOBILE               */
 
 @media only screen and (max-width: 600px) {
 
+	body {
+		font-size: 1rem;
+	}
+
 	.mobile {
-		display: block;
+		display: block !important;
 	}
 
 	.desktop {
-		display: none;
+		display: none !important;
 	}
 
 
@@ -150,6 +165,7 @@ p {
 	}
 
 	.artist-list {
+		width: 30vw;
 		display: flex;
 		flex-flow: column;
 	}
@@ -159,15 +175,28 @@ p {
 		height: 10vh;
 	}
 
-	.cell-row {
-		flex-flow: column;
-		height: auto;
+	.artist-list .text {
+		width: 80%;
 	}
+
+/*	.cell-row {
+		flex-flow: row;
+		height: auto;
+	}*/
 
 	.logo > img {
 		width: 50vw;
 		max-width: 150px;
 	}
+
+}
+
+@media only screen and (max-width: 400px) {
+
+	body {
+		font-size: 0.8rem;
+	}
+
 
 }
 
