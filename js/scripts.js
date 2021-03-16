@@ -15,14 +15,18 @@ $(document).ready(function(){
   	var content = $(this).attr('data')
   	var interval = $(this).attr('data-type')
     $(".intro .text").hide().delay(200).fadeIn(50).html(texts[content].text );
-    $(".image-cell").css( 'background-image', 'url(' + texts[content].image + ')');
     $(".button[data='" + content + "']").css({ "border-top" : "2px solid grey", "border-left" : "2px solid grey", "border-right" : "2px solid white", "border-bottom" : "2px solid white", })
     $(".button[data!='" + content + "']").css({ "border-top" : "2px solid white", "border-left" : "2px solid white", "border-right" : "2px solid grey", "border-bottom" : "2px solid grey", })  
   	if ( interval !== "slide" ) { // check if slideshow should be running
   		clearInterval(runslides)
-  	} else { 
-		runslides = setInterval(slides, 3000)	
-	}
+	    $(".image-cell").css( 'background-image', 'url(' + texts[content].image + ')');
+  	} else {
+  		clearInterval(runslides)
+    	$(".image-cell").css( 'background-image', 'url(' + slideshow[Math.floor(Math.random()*slideshow.length)] + ')');
+	  	$(".imageR .image-cell").css({ 'background-image' : 'url(' + fullres[Math.floor(Math.random()*fullres.length)] + ')', 
+	  												'background-position' : Math.floor(Math.random()*100)/2+30 + "% " + Math.floor(Math.random()*100) + "%",
+	  												'background-size' : "300%", })	
+	  }
   });
 
 });
