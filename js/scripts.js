@@ -28,7 +28,7 @@ $(document).ready(function(){
 
 });
 
-var slideshow = ["assets/img/work-pics/sq/drone_megaphone_sq.jpg","assets/img/work-pics/sq/foreign_sq.jpg", "assets/img/work-pics/sq/kinlaw_sq.jpg", "assets/img/work-pics/sq/fei_passing_sq.jpg", "assets/img/work-pics/sq/sarah_sq.jpg", "assets/img/work-pics/sq/ramos_wu_sq.jpg" ]
+var slideshow = ["assets/img/work-pics/drone_megaphone_sq.jpg","assets/img/work-pics/foreign_sq.jpg", "assets/img/work-pics/kinlaw_sq.jpg", "assets/img/work-pics/fei_passing_sq.jpg", "assets/img/work-pics/sarah_sq.jpg", "assets/img/work-pics/ramos_wu_sq.jpg" ]
 var fullres = ["assets/img/work-pics/drone_megaphone.jpg","assets/img/work-pics/foreign.jpg", "assets/img/work-pics/kinlaw.jpg", "assets/img/work-pics/fei_passing_sq.jpg", "assets/img/work-pics/sarah.jpg", "assets/img/work-pics/ramos_wu.jpg"]
 
 var texts = {
