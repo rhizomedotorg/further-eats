@@ -7,7 +7,7 @@ $(document).ready(function(){
 	  												'background-size' : "300%", })
 	}
 
-	var runslides = setInterval(slides, 3000)
+	var runslides = setInterval(slides, 2000)
 
   $(".intro .text").html( texts['intro'].text ); // about text is open initially.
 
