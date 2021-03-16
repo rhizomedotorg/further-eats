@@ -160,7 +160,7 @@ p {
 
 /*              DESKTOP               */
 
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 800px) {
 
 	.mobile {
 		display: none !important;
@@ -169,7 +169,7 @@ p {
 
 /*              MOBILE               */
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 800px) and (min-width: 400px) {
 
 	body {
 		font-size: 1rem;
