@@ -160,7 +160,7 @@ p {
 
 /*              DESKTOP               */
 
-@media only screen and (min-width: 800px) {
+@media all and (min-width: 600px) {
 
 	.mobile {
 		display: none !important;
@@ -169,7 +169,7 @@ p {
 
 /*              MOBILE               */
 
-@media only screen and (max-width: 800px) and (min-width: 400px) {
+@media all and (max-width: 600px) {
 
 	body {
 		font-size: 1rem;
@@ -231,14 +231,6 @@ p {
 	.imageR img {
 		width: 200%;
 		object-position: -350px -10px !important;
-	}
-
-}
-
-@media only screen and (max-width: 400px) {
-
-	body {
-		font-size: 0.8rem;
 	}
 
 }
