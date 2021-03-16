@@ -1,17 +1,35 @@
 $(document).ready(function(){
 
+	function slides() {
+	  $(".title .image-cell").css({ 'background-image' : 'url(../' + slideshow[Math.floor(Math.random()*slideshow.length)] + ')' });
+	  	$(".imageR .image-cell").css({ 'background-image' : 'url(../' + slideshow[Math.floor(Math.random()*slideshow.length)] + ')', 
+	  												'background-position' : Math.floor(Math.random()*100)/2+30 + "% " + Math.floor(Math.random()*100) + "%",
+	  												'background-size' : "300%", })
+	}
+
+	var runslides = setInterval(slides, 2000)
+
   $(".intro .text").html( texts['intro'].text ); // about text is open initially.
-  // $(".image-cell").html( '<img src="' + texts['intro'].image + '">' ); // about text is open initially.
-  $(".image-cell").css({ 'background-image' : 'url(../' + texts['intro'].image + ')' }); // about text is open initially.
 
   $(".button").click(function(){
   	var content = $(this).attr('data')
+  	var interval = $(this).attr('data-type')
     $(".intro .text").hide().delay(200).fadeIn(50).html(texts[content].text );
     $(".image-cell").css( 'background-image', 'url(../' + texts[content].image + ')');
     $(".button[data='" + content + "']").css({ "border-top" : "2px solid grey", "border-left" : "2px solid grey", "border-right" : "2px solid white", "border-bottom" : "2px solid white", })
-    $(".button[data!='" + content + "']").css({ "border-top" : "2px solid white", "border-left" : "2px solid white", "border-right" : "2px solid grey", "border-bottom" : "2px solid grey", })
+    $(".button[data!='" + content + "']").css({ "border-top" : "2px solid white", "border-left" : "2px solid white", "border-right" : "2px solid grey", "border-bottom" : "2px solid grey", })  
+  	if ( interval !== "slide" ) { // check if slideshow should be running
+  		console.log("stop!")
+  		clearInterval(runslides)
+  	} else { 
+  		console.log("start!")
+  		setInterval(slides, 2000)
+	}
   });
+
 });
+
+var slideshow = ["assets/img/work-pics/sq/drone_megaphone_sq.jpg","assets/img/work-pics/sq/foreign_sq.jpg", "assets/img/work-pics/sq/kinlaw_sq.jpg", "assets/img/work-pics/sq/fei_passing_sq.jpg", "assets/img/work-pics/sq/sarah_sq.jpg", "assets/img/work-pics/sq/ramos_wu_sq.jpg" ]
 
 var texts = {
 	'andrew' : {
@@ -33,7 +51,7 @@ var texts = {
 		}, 
 	'about': {
 		"text" : "<p><strong>New Museum</strong></p><p>The New Museum is the only museum in New York City exclusively devoted to contemporary art. Founded in 1977, the New Museum is a center for exhibitions, information, and documentation about living artists from around the world. From its beginnings as a one-room office on Hudson Street to the inauguration of its first freestanding building on the Bowery designed by SANAA in 2007, the New Museum continues to be a place of experimentation and a hub of new art and new ideas.</p><p><strong>NEW INC</strong></p><p>NEW INC was cofounded by Lisa Phillips and Karen Wong in 2013 and is the first museum led cultural incubator dedicated to supporting innovation, collaboration, and entrepreneurship across art, design, and technology. NEW INC’s Director is Stephanie Pereira. For more information, visit newinc.org.</p><p><strong>Rhizome</strong></p><p>Rhizome champions born-digital art and culture through artist-centered programs that commission, present, and preserve art made with and through digital networks and tools. Online since 1996, the organization is an affiliate of the iconic New Museum in New York City. For more information, visit rhizome.org.</p><p><strong>Nokia Bell Labs</strong></p><p>Nokia Bell Labs, Nokia’s research and innovation arm, creates the disruptive technologies that are shaping the way the world communicates and connects. With expertise in analytics, cloud, fixed, optics, and wireless, and by collaborating openly with the global innovation community, Nokia Bell Labs is seeking the technology solutions that will transform the connected world, enhancing the speed, capacity, efficiency, and reliability of data, as well as the increasing automation and digitization of our lives and entire industries. For ninety years, scientific breakthroughs at Nokia Bell Labs have fundamentally transformed the ICT industry and won eight Nobel Prizes.</p>",
-		"image" : "assets/img/work-pics/sq/drone_megaphone_sq.jpg",
+		"image" : "",
 	},
 	'fei' : {
 		"text" : "<p><strong>Fei Liu</strong><br><strong>PASSING (2021)</strong><br><em>Performance and video</em><br><br><a href=''>View this work (external link)</a></p><p>From the artist</p><p>In PASSING, a pair of engineers discover the surprising use of a factory robot that's been repurposed for the home, and contend with the friction between desiring technology to convince—even to pass or surpass—us of its humanity, and proving to ourselves and others that it cannot.</p><p>As technologists and engineers, we are very excited about all the ways robots can improve our efficiency or perform new tasks, but sometimes we miss that the most important thing a robot can do is interact with a human. We have been working with Fei on this project for a couple of years always investigating what in Fei's words it means to “raise empathic robots”. This gives a sense of Fei’s interests and her sensibilities towards the interaction between humans and machines, and it's this sort of thinking that is helping Bell Labs direct its own ideas on better Robot Human Interaction. </p>", 

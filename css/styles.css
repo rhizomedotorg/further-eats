@@ -54,7 +54,7 @@ p {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  background-color: black;
+  background-color: grey;
 
 }
 
@@ -64,6 +64,8 @@ p {
   background-position:  80% 20%;
   background-repeat: no-repeat;
   background-size: 300% auto;
+  background-color: grey;
+
 }
 
 
