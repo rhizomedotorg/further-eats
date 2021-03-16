@@ -9,7 +9,8 @@ $(document).ready(function(){
     $(".intro > .text").html( texts[content].text );
     $(".image-cell").html( '<img src="' + texts[content].image + '">' ); // about text is open initially.
     $(".imageR img").css({ 'object-position' : texts[content].position })
-
+    $(".button[data='" + content + "']").css({ "border-top" : "2px solid grey", "border-left" : "2px solid grey", "border-right" : "2px solid white", "border-bottom" : "2px solid white", })
+    $(".button[data!='" + content + "']").css({ "border-top" : "2px solid white", "border-left" : "2px solid white", "border-right" : "2px solid grey", "border-bottom" : "2px solid grey", })
   });
 });
 
