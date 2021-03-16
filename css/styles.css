@@ -133,7 +133,7 @@ p {
 .imageR img {
 	width: 300%;
 	object-fit: cover;
-	object-position: -60vw center;
+	object-position: -441px -280px;
 }
 
 
