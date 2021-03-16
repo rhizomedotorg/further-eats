@@ -72,6 +72,7 @@ p {
 .main-title .image-cell > img {
 	width: 170%;
 	max-height: 52vh;
+	height: 45vh;
 	object-fit: cover;
 	object-position: -43px 1%;
 	margin: -20px -20px -20px -20px;
