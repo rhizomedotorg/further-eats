@@ -9,7 +9,7 @@ $(document).ready(function() {
 			'background-size': "300%",
 		})
 
-	
+
 	function slides() {
 		$(".title .image-cell").css({
 			'background-image': 'url(' + slideshow[Math.floor(Math.random() * slideshow.length)] + ')'
@@ -41,6 +41,9 @@ $(document).ready(function() {
 		if (interval !== "slide") { // check if slideshow should be running
 			clearInterval(runslides)
 			$(".image-cell").css('background-image', 'url(' + texts[content].image + ')');
+			$(".imageR .image-cell").css({
+				'background-position': Math.floor(Math.random() * 100) / 2 + 30 + "% " + Math.floor(Math.random() * 100) + "%",
+			})
 		} else {
 			clearInterval(runslides)
 			$(".image-cell").css('background-image', 'url(' + slideshow[Math.floor(Math.random() * slideshow.length)] + ')');
