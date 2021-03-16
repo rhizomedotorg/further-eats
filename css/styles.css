@@ -62,7 +62,7 @@ p {
 	flex-flow: column;
 	flex: 1 0 auto;
 	max-width: 30vw;
-	height: 80vh;
+/*	height: 80vh;*/
 }
 	
 .main-title > .cell {
@@ -71,8 +71,8 @@ p {
 
 .main-title .image-cell > img {
 	width: 170%;
-/*	max-height: 52vh;
-*/	object-fit: cover;
+	max-height: 52vh;
+	object-fit: cover;
 	object-position: -43px 1%;
 	margin: -20px -20px -20px -20px;
 }
