@@ -7,7 +7,7 @@ $(document).ready(function(){
 	  												'background-size' : "300%", })
 	}
 
-	var runslides = setInterval(slides, 2000)
+	var runslides = setInterval(slides, 3000)
 
   $(".intro .text").html( texts['intro'].text ); // about text is open initially.
 
@@ -19,10 +19,9 @@ $(document).ready(function(){
     $(".button[data='" + content + "']").css({ "border-top" : "2px solid grey", "border-left" : "2px solid grey", "border-right" : "2px solid white", "border-bottom" : "2px solid white", })
     $(".button[data!='" + content + "']").css({ "border-top" : "2px solid white", "border-left" : "2px solid white", "border-right" : "2px solid grey", "border-bottom" : "2px solid grey", })  
   	if ( interval !== "slide" ) { // check if slideshow should be running
-  		console.log("stop!")
   		clearInterval(runslides)
   	} else { 
-		runslides = setInterval(slides, 2000)	
+		runslides = setInterval(slides, 3000)	
 	}
   });
 
@@ -74,7 +73,7 @@ var texts = {
 	"text" : "<p><strong>Mark Ramos and Ziyang Wu</strong><br><strong>Networked Ecosystem (2021)</strong><br><em>Live simulation online environment</em><br><br><a href=''>View this work (external link)</a></p><p>From the artist</p><p>Networked Ecosystem is a live-simulation environment that presents an ecosystem built of a variety of digital  senses. Commissioned by NEW INC, Rhizome and Nokia Bell Labs, Networked Ecosystem takes machine vision and sensing data collected by Bell Lab’s experimental robots and sensors and repurposes it to drive a 3D environmental simulation.</p><p>In Networked Ecosystem, natural phenomena have been replaced by digital and artificial systems as forces that drive development: Electricity/battery = sustenance, WIFI signals = nutrition, Lidar data = fire/heat. Data Organisms populate this digital ecosystem as native life forms in the form of bots, AI’s, and avatars. Visitors to this networked landscape develop new kinds of digital senses to experience data as environmental changes, and interact with the simulated world and each other in an ever-changing online environment.</p><p>At Bell Labs, we are developing solutions that create smart enterprises. One of the most interesting areas of research is how to represent an extremely complex ecosystem of multi-modal data to a user in a way that empowers them with knowledge of an environment and its state, such that they can easily take action. Today's data visualization relies on static 2D bar charts and pie graphs to represent dynamic environments; methods that are not at all innate to the way that we, as humans, experience the world around us. We are happy to present Networked Ecosystems, a 3D world developed by Mark and Ziyang that lives, grows and changes with the data—enabling new modes of more human-centric exploration.</p>",
 	"image" : "assets/img/work-pics/ramos_wu_sq.jpg",
 	"imageFull" : "assets/img/work-pics/ramos_wu.jpg",
-}
+	}
 
 }
 
